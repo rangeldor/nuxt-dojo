@@ -20,8 +20,6 @@
 </template>
 
 <script lang="ts" setup>
-import type { IProduct } from '~/interface/product'
-
 const { product } = defineProps<{ product: IProduct | null }>()
 </script>
 

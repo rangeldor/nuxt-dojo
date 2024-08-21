@@ -72,4 +72,13 @@ yarn preview
 bun run preview
 ```
 
+## .env
+```bash
+    CURRENCY_API_KEY="api_key-string"
+```
+
+Get the currency api key on `https://currencyapi.com/`
+
+
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

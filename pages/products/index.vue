@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="grid grid-cols-4 gap-5">
+    <p v-if="status === 'pending'">Carregando produtos</p> 
+
+    <div class="grid grid-cols-4 gap-5" v-else>           
       <div v-for="p in products">
         <ProductCard :product="p" />
       </div>
@@ -9,18 +11,16 @@
 </template>
 
 <script lang="ts" setup>
-import type { IProduct } from '~/interface/product'
-
 definePageMeta({
   layout: "products",
 });
 
-const { data: products } = await useFetch<IProduct[]>(
+const { data: products, status } = await useLazyFetch<IProduct[]>(
   "https://fakestoreapi.com/products",
 );
 
 useHead({
-  title: "Nuxt Dogo | Merch",
+  title: "Nuxt DoJo | Merch",
   meta: [{ name: "description", content: "Nuxt 3 Merch" }],
 });
 </script>
