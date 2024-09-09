@@ -10,9 +10,7 @@
         <h3 class="font-bold-b-2 mb-4 pb-2">Product description</h3>
         <p class="mb-7">{{ product?.description }}</p>
         <button class="btn flex">
-          <i class="material-icons mr-2">
-            add_shopping_cart
-          </i>
+          <i class="material-icons mr-2"> add_shopping_cart </i>
         </button>
       </div>
     </div>
@@ -20,7 +18,7 @@
 </template>
 
 <script lang="ts" setup>
-const { product } = defineProps<{ product: IProduct | null }>()
+const { product } = defineProps<{ product: IProduct | null }>();
 </script>
 
 <style scoped>

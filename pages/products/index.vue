@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p v-if="status === 'pending'">Carregando produtos</p> 
+    <p v-if="status === 'pending'">Carregando produtos</p>
 
-    <div class="grid grid-cols-4 gap-5" v-else>           
+    <div v-else class="grid grid-cols-4 gap-5">
       <div v-for="p in products">
         <ProductCard :product="p" />
       </div>

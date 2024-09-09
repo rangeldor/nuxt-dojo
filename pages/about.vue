@@ -12,5 +12,5 @@ useHead({
   meta: [{ name: "description", content: "About page" }],
 });
 
-const { data } = await useFetch('/api/currency/EUR')
+const { data } = await useFetch("/api/currency/EUR");
 </script>
