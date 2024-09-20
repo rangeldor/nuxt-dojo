@@ -19,6 +19,9 @@ export default defineNuxtConfig({
     fix: true, // Option to automatically fix lint issues
     cache: false // Optionally disable cache if needed
   },
+  build: {
+    transpile: ['@tailwindcss/forms'] // Exemplo, ajuste conforme necessário
+  },
   runtimeConfig: {
     currencyKey: process.env.CURRENCY_API_KEY
   }
