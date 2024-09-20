@@ -8,9 +8,9 @@
 
 <script lang="ts" setup>
 useHead({
-  title: "About",
-  meta: [{ name: "description", content: "About page" }],
-});
+  title: 'About',
+  meta: [{ name: 'description', content: 'About page' }]
+})
 
-const { data } = await useFetch("/api/currency/EUR");
+const { data } = await useFetch('/api/currency/EUR')
 </script>

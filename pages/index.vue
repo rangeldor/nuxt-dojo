@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 useHead({
-  title: "Home",
-   meta: [{ name: "description", content: "Home page" }],
-});
+  title: 'Home',
+  meta: [{ name: 'description', content: 'Home page' }]
+})
 </script>

@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import type { IProduct } from "~/interface/product";
+import type { IProduct } from '~/interface/product'
 
-const { product } = defineProps<{ product: IProduct }>();
+const { product } = defineProps<{ product: IProduct }>()
 </script>
 
 <style scoped>

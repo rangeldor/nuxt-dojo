@@ -1,0 +1,12 @@
+{
+  "plugins": ["nuxt", "prettier"], // O mesmo que "eslint-plugin-nuxt", "eslint-plugin-prettier"
+  "extends": ["@nuxt", "plugin:prettier/recommended", "prettier"], // O mesmo que "@nuxt/eslint-config", "plugin:eslint-plugin-prettier/recommended", "eslint-config-prettier"
+  "rules": {
+    "semi": ["error", "never"], // Desativa ponto e vírgula
+    "quotes": ["error", "single"] // Usa aspas simples
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

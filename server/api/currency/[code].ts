@@ -7,4 +7,4 @@ export default defineEventHandler(async (event) => {
   const { data } = await $fetch<IApiCurrency>(uri)
 
   return data
-});
+})

@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts" setup>
-const { product } = defineProps<{ product: IProduct | null }>();
+const { product } = defineProps<{ product: IProduct | null }>()
 </script>
 
 <style scoped>

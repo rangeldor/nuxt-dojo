@@ -8,13 +8,22 @@
 </template>
 
 <script setup lang="ts">
-import type { NuxtError } from '#app';
+import { computed } from 'vue'
+import { useError, clearError } from '#app' // Import useError and clearError composables
+import type { NuxtError } from '#app' // Import the NuxtError type
 
-const { error } = defineProps({
-  error: Object as () => NuxtError,
-})
+// Get the current error from the composable
+const rawError = useError() // rawError is Ref<NuxtError | null | undefined>
 
-const handleClearError = () => clearError({ redirect: '/' })
+// Create a computed property to handle null or undefined errors
+const error = computed(
+  () =>
+    rawError.value ||
+    ({ statusCode: 500, message: 'An unexpected error occurred' } as NuxtError)
+)
+
+// Handle clearing the error and redirecting to the home page
+const handleClearError = () => {
+  clearError({ redirect: '/' })
+}
 </script>
-
-<style scoped></style>

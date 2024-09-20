@@ -9,21 +9,21 @@
 </template>
 
 <script lang="ts" setup>
-const { id } = useRoute().params;
+const { id } = useRoute().params
 
-const uri = `https://fakestoreapi.com/products/${id}`;
+const uri = `https://fakestoreapi.com/products/${id}`
 
-const { data: product } = await useFetch<IProduct>(uri);
+const { data: product } = await useFetch<IProduct>(uri)
 
 if (!product.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: "Product not found",
-    fatal: true,
-  });
+    statusMessage: 'Product not found',
+    fatal: true
+  })
 }
 
 definePageMeta({
-  layout: "products",
-});
+  layout: 'products'
+})
 </script>
